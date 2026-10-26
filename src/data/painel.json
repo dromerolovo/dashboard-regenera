@@ -1,0 +1,723 @@
+{
+ "meta": {
+  "ciclo": "jul/2026"
+ },
+ "totais": {
+  "apr": 40574073,
+  "prev": 468516720.83000004,
+  "mob": 302737564.11,
+  "n": 39,
+  "n_mob": 29,
+  "dir": 133722,
+  "ind": 1076578,
+  "vidas": 1210300
+ },
+ "eixos": [
+  {
+   "id": "edu",
+   "nome": "Educação",
+   "cor": "#F06636",
+   "apr": 8015208,
+   "prev": 56244375,
+   "mob": 22514877.63,
+   "dir": 104258,
+   "ind": 770000,
+   "manchete": "11 projetos, 8 com pessoas alcançadas informadas. É o eixo com mais vidas diretas do portfólio — e onde está o Refundar.",
+   "hero": {
+    "total": 595,
+    "label": "escolas impactadas pelos projetos de Educação",
+    "icon": "escola",
+    "unit": 5,
+    "nota": "A mesma escola pode aparecer em mais de um projeto.",
+    "parts": [
+     {
+      "nome": "Ensino Médio Integral",
+      "n": 440
+     },
+     {
+      "nome": "S.O.S De Volta para Escola",
+      "n": 73
+     },
+     {
+      "nome": "Programa de Saúde Mental",
+      "n": 72
+     },
+     {
+      "nome": "Escolas Indígenas",
+      "n": 10
+     }
+    ]
+   },
+   "cards": [
+    {
+     "v": "28.197",
+     "l": "estudantes no Ensino Médio Integral",
+     "icon": "cap"
+    },
+    {
+     "v": "8.425",
+     "l": "professores capacitados (EMI + Encanta Hub)",
+     "icon": "medal"
+    },
+    {
+     "v": "24.000",
+     "l": "servidores com acesso a apoio psicoemocional — linha do Refundar",
+     "icon": "sorriso"
+    }
+   ]
+  },
+  {
+   "id": "hab",
+   "nome": "Habitação",
+   "cor": "#C9A48A",
+   "apr": 3675000,
+   "prev": 127700000.0,
+   "mob": 78242000.00000001,
+   "dir": 743,
+   "ind": 345,
+   "manchete": "Mede-se em casas: cada unidade entregue, pronta ou em obra conta 4 pessoas.",
+   "hero": {
+    "total": 83,
+    "label": "casas entregues no eixo Habitação",
+    "icon": "casa",
+    "unit": 1,
+    "nota": "Projetos do eixo Soluções Urbanas também entregam moradias: a Favela 3D Vila Costaneira informa 40 casas novas entregues e 200 reformadas. Elas são contadas separadamente, no eixo Soluções Urbanas.",
+    "parts": [
+     {
+      "nome": "Legado Habitação RS",
+      "n": 42
+     },
+     {
+      "nome": "2 por 1",
+      "n": 31
+     },
+     {
+      "nome": "Uma Casa por Dia",
+      "n": 10
+     }
+    ]
+   },
+   "cards": [
+    {
+     "v": "81",
+     "l": "casas prontas, ainda não entregues",
+     "icon": "casa"
+    },
+    {
+     "v": "595",
+     "l": "pessoas formadas na construção civil",
+     "icon": "mulher"
+    },
+    {
+     "v": "R$ 70 mi",
+     "l": "mobilizados só pelo Legado — 89% do eixo",
+     "icon": "grafico"
+    }
+   ]
+  },
+  {
+   "id": "su",
+   "nome": "Soluções Urbanas",
+   "cor": "#A2C6BA",
+   "apr": 16045267,
+   "prev": 50724585.83,
+   "mob": 33737560.48,
+   "dir": 3435,
+   "ind": 217302,
+   "manchete": "13 projetos de bairro e preparação climática; 5 ainda em implementação.",
+   "hero": {
+    "total": 3435,
+    "label": "pessoas alcançadas diretamente em Soluções Urbanas",
+    "icon": "pessoa",
+    "unit": 25,
+    "nota": "",
+    "parts": [
+     {
+      "nome": "Fundo Reconstruir RS",
+      "n": 1989
+     },
+     {
+      "nome": "Tchê Prepara I",
+      "n": 462
+     },
+     {
+      "nome": "Favela 3D Vila Costaneira",
+      "n": 326
+     },
+     {
+      "nome": "Centro de Referência de Resíduos",
+      "n": 314
+     },
+     {
+      "nome": "Tamanduá (Teia I)",
+      "n": 170
+     },
+     {
+      "nome": "Lideranças Comunitárias (CUFA)",
+      "n": 82
+     },
+     {
+      "nome": "Sementes da Vida Nova (Teia I)",
+      "n": 62
+     },
+     {
+      "nome": "Comunidades Resilientes",
+      "n": 30
+     }
+    ]
+   },
+   "cards": [
+    {
+     "v": "544",
+     "l": "pessoas em ações de preparação e resposta a eventos extremos",
+     "icon": "pessoa"
+    },
+    {
+     "v": "10",
+     "l": "infraestruturas resilientes implementadas",
+     "icon": "casa"
+    },
+    {
+     "v": "53",
+     "l": "organizações e grupos comunitários envolvidos",
+     "icon": "coracao"
+    }
+   ]
+  },
+  {
+   "id": "neg",
+   "nome": "Negócios",
+   "cor": "#FC9C0C",
+   "apr": 6848333,
+   "prev": 224772745.0,
+   "mob": 162157510.0,
+   "dir": 17841,
+   "ind": 55164,
+   "manchete": "Crédito e apoio a pequenos negócios: o eixo que mais mobilizou (54% do total).",
+   "hero": {
+    "total": 1227,
+    "label": "empreendedores e empresas apoiados",
+    "icon": "mala",
+    "unit": 10,
+    "nota": "",
+    "parts": [
+     {
+      "nome": "Estímulo Retomada RS",
+      "n": 965
+     },
+     {
+      "nome": "SuperaRS",
+      "n": 232
+     },
+     {
+      "nome": "Impacta RS",
+      "n": 30
+     }
+    ]
+   },
+   "cards": [
+    {
+     "v": "R$ 67,3 mi",
+     "l": "em crédito disponibilizado pelo Estímulo",
+     "icon": "grafico"
+    },
+    {
+     "v": "100",
+     "l": "pessoas capacitadas para empregabilidade",
+     "icon": "cap"
+    },
+    {
+     "v": "150",
+     "l": "mulheres no Mulheres Transformam",
+     "icon": "mulher"
+    }
+   ]
+  },
+  {
+   "id": "multi",
+   "nome": "Multissetoriais",
+   "cor": "#D2E484",
+   "apr": 5990265,
+   "prev": 9075015,
+   "mob": 6085616,
+   "dir": 7445,
+   "ind": 33767,
+   "manchete": "Fundos e programas que financiam outras organizações: 17 subprojetos só no TrilhaRS I.",
+   "hero": {
+    "total": 17,
+    "label": "subprojetos financiados pelo TrilhaRS I",
+    "icon": "broto",
+    "unit": 1,
+    "nota": "",
+    "parts": [
+     {
+      "nome": "TrilhaRS I",
+      "n": 17
+     }
+    ]
+   },
+   "cards": [
+    {
+     "v": "R$ 1.465.351",
+     "l": "arrecadados por financiamento coletivo na plataforma",
+     "icon": "grafico"
+    },
+    {
+     "v": "3.279",
+     "l": "apoiadores (doadores)",
+     "icon": "coracao"
+    },
+    {
+     "v": "179",
+     "l": "empreendedores apoiados",
+     "icon": "broto"
+    }
+   ]
+  }
+ ],
+ "projetos": [
+  {
+   "id": "ind",
+   "nome": "Escolas Indígenas",
+   "eixo": "edu",
+   "fase": "Em acompanhamento",
+   "apr": 500000,
+   "prev": 23000000,
+   "mob": 500000,
+   "entrega": "10 escolas indígenas · 500 vidas diretas ainda previstas"
+  },
+  {
+   "id": "res",
+   "nome": "Centro de Referência de Resíduos",
+   "eixo": "su",
+   "fase": "Em acompanhamento",
+   "apr": 1630000,
+   "prev": 3423000,
+   "mob": 2353000,
+   "entrega": "314 pessoas · 3 infraestruturas resilientes · 6 organizações"
+  },
+  {
+   "id": "lem",
+   "nome": "Centro Lemann (Lideranças pela Educação)",
+   "eixo": "edu",
+   "fase": "Em acompanhamento",
+   "apr": 1200000,
+   "prev": 6000000,
+   "mob": 3250000,
+   "entrega": "118 lideranças capacitadas · 9 secretarias municipais"
+  },
+  {
+   "id": "cr",
+   "nome": "Comunidades Resilientes",
+   "eixo": "su",
+   "fase": "Em acompanhamento",
+   "apr": 498600,
+   "prev": 6526585.83,
+   "mob": 4905513.08,
+   "entrega": "30 pessoas no Lami · 3 organizações"
+  },
+  {
+   "id": "emi",
+   "nome": "Ensino Médio Integral",
+   "eixo": "edu",
+   "fase": "Em acompanhamento",
+   "apr": 1300000,
+   "prev": 11300000,
+   "mob": 11469272.61,
+   "entrega": "440 escolas · 28.197 estudantes · 8.275 professores"
+  },
+  {
+   "id": "4d",
+   "nome": "Escritório de Projetos do 4D",
+   "eixo": "su",
+   "fase": "Em acompanhamento",
+   "apr": 500000,
+   "prev": 1400000,
+   "mob": 561448.75,
+   "entrega": "3 infraestruturas · 10 organizações · 200.000 indiretas = frequentadores do Caldeira"
+  },
+  {
+   "id": "est",
+   "nome": "Estímulo Retomada RS",
+   "eixo": "neg",
+   "fase": "Em acompanhamento",
+   "apr": 3000000,
+   "prev": 80000000.00000001,
+   "mob": 51000000.00000001,
+   "entrega": "965 empreendedores · R$ 67,3 mi em crédito disponibilizado"
+  },
+  {
+   "id": "fav",
+   "nome": "Favela 3D Vila Costaneira",
+   "eixo": "su",
+   "fase": "Em acompanhamento",
+   "apr": 1000000,
+   "prev": 10000000,
+   "mob": 12000000,
+   "entrega": "40 casas entregues · 200 reformadas · 73 pessoas capacitadas"
+  },
+  {
+   "id": "rec",
+   "nome": "Fundo Reconstruir RS",
+   "eixo": "su",
+   "fase": "Em acompanhamento",
+   "apr": 500000,
+   "prev": 3075000,
+   "mob": 2267598.65,
+   "entrega": "1.989 pessoas em grupos comunitários apoiados"
+  },
+  {
+   "id": "enc",
+   "nome": "Hub de Encantado (Encanta Hub)",
+   "eixo": "edu",
+   "fase": "Em acompanhamento",
+   "apr": 500000,
+   "prev": 500000,
+   "mob": 1159599.5,
+   "entrega": "150 professores capacitados · 3 secretarias"
+  },
+  {
+   "id": "imp",
+   "nome": "Impacta RS",
+   "eixo": "neg",
+   "fase": "Em acompanhamento",
+   "apr": 515000,
+   "prev": 40500000,
+   "mob": 515000,
+   "entrega": "30 empreendedores · 30 pessoas capacitadas"
+  },
+  {
+   "id": "cufa",
+   "nome": "Lideranças Comunitárias (CUFA)",
+   "eixo": "su",
+   "fase": "Em acompanhamento",
+   "apr": 500000,
+   "prev": 1000000,
+   "mob": 900000,
+   "entrega": "82 pessoas em preparação climática · 4 infraestruturas · 15 organizações"
+  },
+  {
+   "id": "mec",
+   "nome": "Mulher em Construção",
+   "eixo": "hab",
+   "fase": "Em acompanhamento",
+   "apr": 450000,
+   "prev": 3200000,
+   "mob": 450000,
+   "entrega": "115 mulheres formadas na construção civil"
+  },
+  {
+   "id": "mt",
+   "nome": "Mulheres Transformam",
+   "eixo": "neg",
+   "fase": "Em acompanhamento",
+   "apr": 250000,
+   "prev": 918493,
+   "mob": 812760,
+   "entrega": "150 mulheres · 70 capacitadas para empregabilidade"
+  },
+  {
+   "id": "tch",
+   "nome": "Tchê Prepara I",
+   "eixo": "su",
+   "fase": "Em acompanhamento",
+   "apr": 375000,
+   "prev": 750000,
+   "mob": 750000,
+   "entrega": "462 pessoas preparadas para emergências · 19 organizações"
+  },
+  {
+   "id": "sau",
+   "nome": "Programa de Saúde Mental",
+   "eixo": "edu",
+   "fase": "Em acompanhamento",
+   "apr": 444375,
+   "prev": 444375,
+   "mob": 444375,
+   "entrega": "267 servidores com apoio psicoemocional · 72 escolas"
+  },
+  {
+   "id": "leg",
+   "nome": "Legado Habitação RS",
+   "eixo": "hab",
+   "fase": "Em acompanhamento",
+   "apr": 1000000,
+   "prev": 55000000.00000001,
+   "mob": 70000000.00000001,
+   "entrega": "42 casas entregues · 66 prontas · 8 em construção · 480 formados na construção civil"
+  },
+  {
+   "id": "rede",
+   "nome": "Rede de Geração Econômica",
+   "eixo": "neg",
+   "fase": "Em acompanhamento",
+   "apr": 500000,
+   "prev": 1454252,
+   "mob": 529750,
+   "entrega": "86 pessoas (Vila Bom Jesus e quilombos de Tavares)"
+  },
+  {
+   "id": "teia",
+   "nome": "Teia de Soluções I",
+   "eixo": "su",
+   "fase": "Em acompanhamento",
+   "apr": 1041667,
+   "prev": 10000000,
+   "mob": 10000000,
+   "entrega": "Sementes da Vida Nova 62 · Tamanduá 170 vidas diretas"
+  },
+  {
+   "id": "ucd",
+   "nome": "Uma Casa por Dia",
+   "eixo": "hab",
+   "fase": "Em acompanhamento",
+   "apr": 225000,
+   "prev": 1500000,
+   "mob": 1600000,
+   "entrega": "10 casas entregues · 15 prontas · 32 em construção"
+  },
+  {
+   "id": "fmh",
+   "nome": "FMHAE",
+   "eixo": "hab",
+   "fase": "Finalizados",
+   "apr": 500000,
+   "prev": 60000000,
+   "mob": 500000,
+   "entrega": "sem indicador registrado (0 vidas diretas)"
+  },
+  {
+   "id": "ref",
+   "nome": "Refundar Educação",
+   "eixo": "edu",
+   "fase": "Finalizados",
+   "apr": 520833,
+   "prev": 1700000,
+   "mob": 1735000,
+   "entrega": "24.000 servidores com acesso a apoio psicoemocional · Unidade de Entregas (PMO) da SEDUC remodelada"
+  },
+  {
+   "id": "sos",
+   "nome": "S.O.S De Volta para Escola",
+   "eixo": "edu",
+   "fase": "Finalizados",
+   "apr": 250000,
+   "prev": 250000,
+   "mob": 1456630.52,
+   "entrega": "73 escolas com cozinha reequipada · 449 itens · 28.187 estudantes"
+  },
+  {
+   "id": "sup",
+   "nome": "SuperaRS",
+   "eixo": "neg",
+   "fase": "Finalizados",
+   "apr": 2083333,
+   "prev": 100000000,
+   "mob": 109300000,
+   "entrega": "232 empreendedores · 5.290 vidas diretas"
+  },
+  {
+   "id": "2p1",
+   "nome": "2 por 1",
+   "eixo": "hab",
+   "fase": "Finalizados",
+   "apr": 1500000,
+   "prev": 8000000,
+   "mob": 5692000,
+   "entrega": "31 casas entregues"
+  },
+  {
+   "id": "tra",
+   "nome": "Transforma Realidades",
+   "eixo": "edu",
+   "fase": "Finalizados",
+   "apr": 500000,
+   "prev": 2000000,
+   "mob": 2500000,
+   "entrega": "2.511 vidas diretas"
+  },
+  {
+   "id": "fut",
+   "nome": "Futuro do Vale",
+   "eixo": "su",
+   "fase": "Em implementação",
+   "apr": 1500000,
+   "prev": 1500000,
+   "mob": null,
+   "entrega": "em implementação · sem mobilização reportada"
+  },
+  {
+   "id": "fres",
+   "nome": "Fundo Resiliência",
+   "eixo": "su",
+   "fase": "Em implementação",
+   "apr": 2000000,
+   "prev": 2000000,
+   "mob": null,
+   "entrega": "em implementação · sem mobilização reportada"
+  },
+  {
+   "id": "teia2",
+   "nome": "Teia de Soluções II",
+   "eixo": "su",
+   "fase": "Em implementação",
+   "apr": 2000000,
+   "prev": 4200000,
+   "mob": null,
+   "entrega": "em implementação · sem mobilização reportada"
+  },
+  {
+   "id": "tch2",
+   "nome": "Tchê Prepara II",
+   "eixo": "su",
+   "fase": "Em implementação",
+   "apr": 1000000,
+   "prev": 1850000,
+   "mob": null,
+   "entrega": "em implementação · sem mobilização reportada"
+  },
+  {
+   "id": "su4d",
+   "nome": "Soluções Urbanas 4D",
+   "eixo": "su",
+   "fase": "Em implementação",
+   "apr": 3500000,
+   "prev": 5000000,
+   "mob": null,
+   "entrega": "em implementação · sem mobilização reportada"
+  },
+  {
+   "id": "mt2",
+   "nome": "Mulheres Transformam II",
+   "eixo": "neg",
+   "fase": "Em implementação",
+   "apr": 500000,
+   "prev": 1900000,
+   "mob": null,
+   "entrega": "em implementação · sem mobilização reportada"
+  },
+  {
+   "id": "cal",
+   "nome": "Educação Caldeira",
+   "eixo": "edu",
+   "fase": "Em implementação",
+   "apr": 1500000,
+   "prev": 9750000,
+   "mob": null,
+   "entrega": "em implementação · sem mobilização reportada"
+  },
+  {
+   "id": "ema",
+   "nome": "Emancipação Social",
+   "eixo": "edu",
+   "fase": "Em implementação",
+   "apr": 500000,
+   "prev": 500000,
+   "mob": null,
+   "entrega": "em implementação · sem mobilização reportada"
+  },
+  {
+   "id": "alf",
+   "nome": "Alfa+",
+   "eixo": "edu",
+   "fase": "Em implementação",
+   "apr": 800000,
+   "prev": 800000,
+   "mob": null,
+   "entrega": "em implementação · sem mobilização reportada"
+  },
+  {
+   "id": "tri2",
+   "nome": "TrilhaRS II",
+   "eixo": "multi",
+   "fase": "Em implementação",
+   "apr": 1000000,
+   "prev": 3000000,
+   "mob": null,
+   "entrega": "em implementação · sem mobilização reportada"
+  },
+  {
+   "id": "coa",
+   "nome": "CoalizãoRS",
+   "eixo": "multi",
+   "fase": "Em acompanhamento",
+   "apr": 3000250,
+   "prev": 3535000,
+   "mob": 3000250,
+   "entrega": "intermediária · 0 vidas registradas"
+  },
+  {
+   "id": "ace",
+   "nome": "Programa de Aceleração",
+   "eixo": "multi",
+   "fase": "Finalizados",
+   "apr": 1340000,
+   "prev": 1340000,
+   "mob": 1340000,
+   "entrega": "11 empreendedores · 10 capacitados"
+  },
+  {
+   "id": "tri",
+   "nome": "TrilhaRS I",
+   "eixo": "multi",
+   "fase": "Finalizados",
+   "apr": 650015,
+   "prev": 1200015,
+   "mob": 1745366,
+   "entrega": "17 subprojetos · 179 empreendedores · 7.429 vidas diretas"
+  }
+ ],
+ "insights": {
+  "V01": {
+   "frase": "Aprovados pelo fundo em 39 projetos de 5 eixos."
+  },
+  "V02": {
+   "frase": "Os projetos previam 11,5 vezes o aporte do fundo."
+  },
+  "V03": {
+   "frase": "Nos 29 projetos que já reportam mobilização, cada R$ 1 do fundo virou R$ 11,52. Contando todos os 39, R$ 7,46."
+  },
+  "V05": {
+   "frase": ""
+  },
+  "V06": {
+   "frase": "10 projetos ainda sem mobilização não aparecem"
+  },
+  "V09": {
+   "frase": "Até jul/2026 foi mobilizado o equivalente a 64,6% do valor total previsto dos 39 projetos."
+  },
+  "P01": {
+   "frase": ""
+  },
+  "P02": {
+   "frase": "Pessoas atendidas, capacitadas ou apoiadas pelos projetos. 78% estão em Educação."
+  },
+  "P03": {
+   "frase": "8 vidas indiretas para cada pessoa alcançada diretamente. 90% delas vêm de dois projetos: Refundar Educação e Escritório 4D."
+  },
+  "P05": {
+   "frase": "Só 11% foram alcançadas diretamente; as outras 89% são vidas indiretas, estimadas pelos projetos."
+  },
+  "P06": {
+   "frase": "Mede-se em casas: cada unidade entregue, pronta ou em obra conta 4 pessoas."
+  },
+  "E01": {
+   "frase": "11 projetos, 8 com pessoas alcançadas informadas. É o eixo com mais vidas diretas do portfólio — e onde está o Refundar."
+  },
+  "E02": {
+   "frase": "Mede-se em casas: cada unidade entregue, pronta ou em obra conta 4 pessoas."
+  },
+  "E03": {
+   "frase": "13 projetos de bairro e preparação climática; 5 ainda em implementação."
+  },
+  "E04": {
+   "frase": "Crédito e apoio a pequenos negócios: o eixo que mais mobilizou (54% do total)."
+  },
+  "E05": {
+   "frase": "Fundos e programas que financiam outras organizações: 17 subprojetos só no TrilhaRS I."
+  },
+  "E06": {
+   "frase": ""
+  }
+ }
+}

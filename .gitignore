@@ -1,0 +1,8 @@
+node_modules/
+dist/
+src/.observablehq/cache/
+auditoria/.vitepress/cache/
+auditoria/.vitepress/dist/
+auditoria
+scripts
+Fontes*

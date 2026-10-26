@@ -1,0 +1,23 @@
+/* Página do painel: largura total, fundo verde, sem as margens do Framework */
+@import url("./style.css");
+#observablehq-center { margin: 0 !important; padding: 0 !important; }
+#observablehq-main { max-width: none; margin: 0; padding: 24px clamp(16px, 3vw, 40px) 40px; }
+#observablehq-main > .observablehq { margin: 0 0 26px; }
+#observablehq-main > .observablehq:empty { display: none; }
+#observablehq-footer { padding: 0 clamp(16px, 3vw, 40px) 24px; margin: 0; }
+.ancora { height: 0; scroll-margin-top: 16px; }
+.painel button { font-family: inherit; }
+.painel button:focus-visible, .painel a:focus-visible, .painel [role="button"]:focus-visible { outline: 2px solid #D2E484; outline-offset: 2px; }
+.painel a { text-decoration: none; }
+.painel .chip:hover { background: rgba(210, 228, 132, 0.16); color: #F0EAD8; }
+.painel .bolha { cursor: pointer; }
+.painel .bolha:focus { outline: none; }
+.painel .bolha:focus-visible .corpo { stroke: #fff; stroke-width: 2.5; }
+.linha-proj { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 2fr) 120px; gap: 16px; align-items: center; }
+@media (max-width: 640px) {
+  .linha-proj { grid-template-columns: minmax(0, 1fr) 110px; gap: 6px 12px; }
+  .linha-proj .lp-nome { grid-column: 1; grid-row: 1; }
+  .linha-proj .lp-mob { grid-column: 2; grid-row: 1; }
+  .linha-proj .lp-entrega { grid-column: 1 / -1; grid-row: 2; }
+}
+@media (max-width: 640px) { .linha-proj:first-child .lp-entrega { display: none; } }

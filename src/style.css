@@ -1,0 +1,29 @@
+/* Estilo das páginas de fontes — cores do sistema RegeneraRS */
+@import url("observablehq:default.css");
+@import url("observablehq:theme-near-midnight.css");
+
+:root {
+  --theme-background: #00432C;
+  --theme-background-alt: #003a26;
+  --theme-foreground: #F0EAD8;
+  --theme-foreground-focus: #D2E484;
+  --theme-foreground-muted: #A2C6BA;
+  --theme-foreground-faint: rgba(240, 234, 216, 0.35);
+  --theme-foreground-fainter: rgba(240, 234, 216, 0.18);
+  --theme-foreground-faintest: rgba(240, 234, 216, 0.08);
+  --sans-serif: Manrope, system-ui, sans-serif;
+  --serif: Manrope, system-ui, sans-serif;
+}
+body { background: #00432C; color: #F0EAD8; font-family: Manrope, system-ui, sans-serif; }
+h1, h2, h3 { font-family: Unbounded, sans-serif; letter-spacing: -0.02em; color: #F0EAD8; }
+h1 { font-weight: 800; font-size: 28px; line-height: 1.15; max-width: 920px; }
+h2 { font-weight: 600; font-size: 17px; margin-top: 2rem; color: #D2E484; }
+a, a[href] { color: #D2E484; }
+a:hover { color: #F0EAD8; }
+p, li { max-width: 920px; }
+code { color: #F0EAD8; background: rgba(240, 234, 216, 0.08); padding: 1px 5px; border-radius: 6px; font-size: 0.86em; }
+table { font-size: 13px; max-width: none; }
+th { color: #A2C6BA; font-weight: 600; }
+td, th { border-color: rgba(240, 234, 216, 0.12); vertical-align: top; }
+#observablehq-main { max-width: 1240px; }
+#observablehq-footer { color: #A2C6BA; font-size: 12px; }
