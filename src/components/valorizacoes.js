@@ -1,8 +1,12 @@
 import * as d3 from "d3";
 import {COR, EASE, mi, rsmi, x1, el, svg, SEG, ROW, CARD, GROUP, textoEstavel, cabecalhoSecao, embrulho} from "./base.js";
 
-const W = 800, H = 560;
-const CENTROS = {edu: [190, 210], hab: [470, 250], su: [660, 190], neg: [300, 420], multi: [620, 430]};
+
+const CENTROS_FR = {edu: [0.24, 0.37], hab: [0.59, 0.45], su: [0.83, 0.34], neg: [0.37, 0.75], multi: [0.78, 0.77]};
+function alturaGrafico(largura) {
+  if (largura < 640) return Math.round(Math.max(560, largura * 1.6));
+  return Math.round(Math.max(380, Math.min(600, window.innerHeight - 230)));
+}
 const CURTO = {
   lem: "Centro Lemann", res: "Centro de Resíduos", "4d": "Escritório 4D", enc: "Encanta Hub", cufa: "CUFA",
   sos: "S.O.S Escola", sau: "Saúde Mental", rede: "Rede de Geração", ace: "Aceleração", est: "Estímulo Retomada",
@@ -51,6 +55,8 @@ function encaixar(texto, r, f, vf, valorTxt) {
 function Valorizacoes(d) {
   const ins = d.insights;
   const st = {vm: "mob", grouped: true, vEixo: null, hover: null};
+  let W = 800, H = 560; 
+  const CENTROS = new Proxy({}, {get: (_, id) => [CENTROS_FR[id][0] * W, CENTROS_FR[id][1] * H]});
   const E = Object.fromEntries(d.eixos.map((e) => [e.id, e]));
   const VM = {
     apr: {label: "Fundo RegeneraRS", kicker: "Aprovado pelo Fundo RegeneraRS", legend: "valor aprovado", tot: d.totais.apr,
@@ -76,7 +82,7 @@ function Valorizacoes(d) {
   gAgr.setAttribute("role", "group"); gAgr.setAttribute("aria-label", "Agrupamento");
 
   const kicker = el("span", `font-size:13px;font-weight:600;color:${COR.salvia}`);
-  const total = el("div", `font:800 54px/0.95 Unbounded,sans-serif;letter-spacing:-0.03em;color:${COR.lima}`);
+  const total = el("div", `font:800 clamp(32px,3.1vw,50px)/1 Unbounded,sans-serif;letter-spacing:-0.03em;color:${COR.lima};white-space:nowrap`);
   const frase = textoEstavel("margin:4px 0 0;font-size:15.5px;line-height:1.45", Object.fromEntries(Object.entries(VM).map(([k, m]) => [k, m.frase()])));
   const cardTotal = el("div", CARD + "padding:24px;display:flex;flex-direction:column;gap:10px", kicker, total, frase.el);
 
@@ -95,7 +101,7 @@ function Valorizacoes(d) {
   const cardEixos = el("div", CARD + "padding:14px;display:flex;flex-direction:column;gap:2px", linhas.map((l) => l.b));
   const esquerda = el("div", "flex:1 1 320px;min-width:0;display:flex;flex-direction:column;gap:14px", cardTotal, cardEixos);
 
-  const sv = svg("svg", {viewBox: `0 0 ${W} ${H}`, width: "100%", style: "display:block;height:auto;overflow:visible"});
+  const sv = svg("svg", {viewBox: `0 0 ${W} ${H}`, width: "100%", style: `display:block;width:100%;height:${H}px;overflow:visible`});
   sv.setAttribute("role", "img");
   sv.setAttribute("aria-label", "Bolhas: um círculo por projeto, área proporcional ao valor");
   const gLbl = svg("g"), gB = svg("g");
@@ -176,7 +182,7 @@ function Valorizacoes(d) {
     const tot = d3.sum(nodes, (n) => val(n.p, st.vm));
     const k0 = Math.sqrt((0.3 * W * H) / (Math.PI * tot));
     for (let tentativa = 0, k = k0; tentativa < 8; tentativa++, k *= 0.93) {
-      for (const n of nodes) { const v = val(n.p, st.vm); n.r = v > 0 ? Math.max(RMIN, k * Math.sqrt(v)) : 0; n.rs = k * Math.sqrt(n.p.apr); }
+      for (const n of nodes) { const v = val(n.p, st.vm); n.r = v > 0 ? Math.max(W < 640 ? 21 : RMIN, k * Math.sqrt(v)) : 0; n.rs = k * Math.sqrt(n.p.apr); }
       if (st.grouped ? layoutPorEixo() : layoutJunto()) break;
     }
     for (const n of nodes) if (n.r <= 0.5) {
@@ -214,7 +220,7 @@ function Valorizacoes(d) {
     const vivos = nodes.filter((n) => n.r > 0.5).sort((a, b) => b.r - a.r || d3.ascending(a.p.id, b.p.id));
     vivos.forEach((n, i) => {
       const ang = i * 2.39996, rad = 14 * Math.sqrt(i);
-      n.x = W / 2 + 1.35 * rad * Math.cos(ang); n.y = H / 2 + rad * Math.sin(ang);
+      n.x = W / 2 + Math.max(1, W / H) * rad * Math.cos(ang); n.y = H / 2 + rad * Math.sin(ang);
       n.vx = n.vy = 0;
     });
     const sim = d3.forceSimulation(vivos)
@@ -313,6 +319,28 @@ function Valorizacoes(d) {
     ].filter(Boolean));
   }
   render();
+
+  function semTransicao(fn) {
+    const els = nodes.flatMap((n) => [n.g, n.esc, n.gs]);
+    els.forEach((e) => (e.dataset.tr = e.style.transition, e.style.transition = "none"));
+    fn();
+    requestAnimationFrame(() => requestAnimationFrame(() => els.forEach((e) => (e.style.transition = e.dataset.tr))));
+  }
+  let primeiro = true, espera = null;
+  function dimensionar() {
+    const w = Math.round(sv.getBoundingClientRect().width);
+    if (!w) return;
+    const h = alturaGrafico(w);
+    if (Math.abs(w - W) < 4 && Math.abs(h - H) < 4) return;
+    W = w; H = h;
+    sv.setAttribute("viewBox", `0 0 ${W} ${H}`);
+    sv.style.height = `${H}px`;
+    esconder();
+    if (primeiro) { primeiro = false; semTransicao(render); } else render();
+  }
+  const ro = new ResizeObserver(() => { clearTimeout(espera); espera = setTimeout(dimensionar, primeiro ? 0 : 150); });
+  ro.observe(direita);
+  window.addEventListener("resize", () => { clearTimeout(espera); espera = setTimeout(dimensionar, 150); });
 
   return el("section", "display:flex;flex-direction:column;gap:18px",
     cabecalhoSecao("Transversal · 01", "Valorizações", gMed, gAgr),
