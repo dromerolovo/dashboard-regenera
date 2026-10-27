@@ -40,22 +40,22 @@ function Pessoas(d) {
   };
   const legenda = el("div", `display:flex;gap:18px;flex-wrap:wrap;font-size:12px;color:${COR.palido}`,
     el("span", null, `1 boneco = ${nf(U)} pessoas`), legEx(COR.creme, "none", "0", "diretas"), legEx("none", COR.creme, "0", "indiretas"));
-  const esquerda = el("div", "flex:3 1 640px;min-width:0;border-radius:30px;background:rgba(0,30,20,.3);border:1px solid rgba(210,228,132,.12);padding:24px;box-sizing:border-box;display:flex;flex-direction:column;gap:14px",
+  const esquerda = el("div", "flex:3 1 560px;min-width:0;border-radius:30px;background:rgba(0,30,20,.3);border:1px solid rgba(210,228,132,.12);padding:24px;box-sizing:border-box;display:flex;flex-direction:column;gap:14px",
     grade, legenda);
 
   const kicker = el("span", `font-size:13px;font-weight:600;color:${COR.salvia}`);
   const total = el("div", `font:800 54px/0.95 Unbounded,sans-serif;letter-spacing:-0.03em;color:${COR.lima}`);
   const frase = textoEstavel("margin:4px 0 0;font-size:15.5px;line-height:1.45", Object.fromEntries(Object.entries(PM).map(([k, m]) => [k, m.frase])));
   const linhas = d.eixos.map((e) => {
-    const v = el("span", "font-family:Unbounded,sans-serif;font-size:13px"), sub = el("span", `font-size:11.5px;color:${COR.salvia};text-align:left`);
+    const v = el("span", "font-family:Unbounded,sans-serif;font-size:17px"), sub = el("span", `font-size:14px;color:${COR.salvia};text-align:left`);
     const b = el("button", ROW,
-      el("span", "display:flex;justify-content:space-between;gap:10px;width:100%;font-size:13.5px",
-        el("span", "display:flex;align-items:center;gap:8px;font-weight:700", el("span", `width:10px;height:10px;border-radius:50%;background:${e.cor}`), e.nome), v),
+      el("span", "display:flex;justify-content:space-between;gap:10px;width:100%;font-size:17px",
+        el("span", "display:flex;align-items:center;gap:10px;font-weight:700", el("span", `width:12px;height:12px;border-radius:50%;background:${e.cor}`), e.nome), v),
       sub);
     b.onclick = () => { st.pEixo = st.pEixo === e.id ? null : e.id; render(); };
     return {e, b, v, sub};
   });
-  const direita = el("div", "flex:1 1 320px;min-width:0;display:flex;flex-direction:column;gap:14px",
+  const direita = el("div", "flex:2 1 420px;min-width:0;display:flex;flex-direction:column;gap:14px",
     el("div", CARD + "padding:24px;display:flex;flex-direction:column;gap:10px", kicker, total, frase.el),
     el("div", CARD + "padding:14px;display:flex;flex-direction:column;gap:2px", linhas.map((l) => l.b)));
 
