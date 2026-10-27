@@ -5,11 +5,14 @@ toc: false
 ---
 
 ```js
-import {cabecalho, rodape} from "./components/cabecalho.js";
+import {cabecalho} from "./components/cabecalho.js";
 import {valorizacoes} from "./components/valorizacoes.js";
 import {pessoas} from "./components/pessoas.js";
 import {eixos} from "./components/eixos.js";
+import {espaco} from "./components/espaco.js";
 const dados = FileAttachment("data/painel.json").json();
+const municipios = FileAttachment("data/municipios.json").json();
+const rs = FileAttachment("data/rs.json").json();
 ```
 
 ```js
@@ -34,6 +37,8 @@ display(pessoas(dados));
 display(eixos(dados));
 ```
 
+<div id="espaco" class="ancora"></div>
+
 ```js
-display(rodape(dados));
+display(espaco(dados, municipios, rs));
 ```

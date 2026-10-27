@@ -21,3 +21,19 @@
   .linha-proj .lp-entrega { grid-column: 1 / -1; grid-row: 2; }
 }
 @media (max-width: 640px) { .linha-proj:first-child .lp-entrega { display: none; } }
+
+/* Navegação do cabeçalho: links simples, sublinhado na seção atual */
+.painel .nav-link { position: relative; padding: 8px 0; font-size: 14px; font-weight: 600; color: rgba(240, 234, 216, 0.72); transition: color .15s; }
+.painel .nav-link::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 2px; border-radius: 2px; background: #D2E484; transform: scaleX(0); transform-origin: left; transition: transform .2s; }
+.painel .nav-link:hover { color: #F0EAD8; }
+.painel .nav-link[aria-current] { color: #D2E484; }
+.painel .nav-link[aria-current]::after { transform: scaleX(1); }
+
+/* Contexto espacial: tooltip do mapa */
+.ce-tip { position: absolute; pointer-events: none; opacity: 0; transition: opacity .12s; max-width: 300px; z-index: 5;
+  background: #F0EAD8; border-radius: 16px; padding: 11px 14px; font: 500 12.5px/1.45 Manrope, sans-serif; color: #29443a; box-shadow: 0 12px 30px rgba(0, 30, 20, .45); }
+.ce-tip b { color: #00432C; font-weight: 800; font-size: 13.5px; }
+.ce-tip .ce-tn { color: #6b7c74; margin-bottom: 4px; }
+.ce-tip ul { margin: 0; padding: 0; list-style: none; }
+.ce-tip li { display: flex; align-items: baseline; gap: 7px; max-width: none; }
+.ce-tip li i { flex: none; width: 8px; height: 8px; border-radius: 50%; transform: translateY(-1px); }

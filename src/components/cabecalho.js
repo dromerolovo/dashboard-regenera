@@ -1,13 +1,24 @@
 import {COR, el, embrulho} from "./base.js";
 
 function Cabecalho(d) {
-  const nav = el("nav", "display:flex;gap:6px;flex-wrap:wrap;font-size:14px;font-weight:600",
-    [["#valorizacoes", "Valorizações"], ["#pessoas", "Pessoas"], ["#eixos", "Eixos"]].map(([h, t]) => {
-      const a = el("a", `padding:10px 16px;border-radius:999px;background:rgba(240,234,216,.08);color:${COR.lima}`, t);
-      a.href = h;
-      return a;
-    }));
+  const links = [["valorizacoes", "Valorizações"], ["pessoas", "Pessoas"], ["eixos", "Eixos"], ["espaco", "Contexto espacial"]].map(([id, t]) => {
+    const a = el("a", null, t);
+    a.href = "#" + id; a.className = "nav-link"; a.dataset.alvo = id;
+    return a;
+  });
+  const nav = el("nav", "display:flex;gap:4px 28px;flex-wrap:wrap", links);
   nav.setAttribute("aria-label", "Seções");
+
+  const marcar = () => {
+    let atual = null;
+    for (const a of links) {
+      const alvo = document.getElementById(a.dataset.alvo);
+      if (alvo && alvo.getBoundingClientRect().top < window.innerHeight / 3) atual = a;
+    }
+    for (const a of links) a.toggleAttribute("aria-current", a === atual);
+  };
+  addEventListener("scroll", marcar, {passive: true});
+  requestAnimationFrame(marcar);
   return el("header", "display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:14px;padding-bottom:18px;border-bottom:1px solid rgba(240,234,216,.14)",
     el("div", "display:flex;align-items:center;gap:14px;flex-wrap:wrap",
       el("div", "font-family:Unbounded,sans-serif;font-weight:800;font-size:18px", "Regenera", el("span", `color:${COR.lima}`, "RS")),
@@ -16,7 +27,3 @@ function Cabecalho(d) {
 }
 
 export const cabecalho = (d) => embrulho(Cabecalho(d));
-
-export function rodape(d) {
-  return embrulho(el("p", `margin:0;font-size:12px;line-height:1.5;color:${COR.salvia}`, `Dados: monitoramento RegeneraRS, ciclo ${d.meta.ciclo}.`));
-}
